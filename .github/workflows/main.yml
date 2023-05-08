@@ -1,20 +1,9 @@
-name: Node.js tests
-
-on:
-  push:
-    branches:
-      - main
-
+name: hello-world
+'on': push
 jobs:
-  test:
+  my-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Install Node.js and dependencies
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14.x'
-      - name: Run tests
-        run: npm test
+      - name: my-step
+        run: echo "Hey there.. World!"
 
